@@ -10,7 +10,7 @@ class BoatsController < ApplicationController
   def create
     @user = current_user
     @boat = Boat.new(boat_params)
-    boat.user = @user
+    @boat.user = @user
     if @boat.save
       redirect_to root_path
     else
