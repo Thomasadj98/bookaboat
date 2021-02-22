@@ -1,0 +1,8 @@
+<h1>Available Boats</h1>
+
+<% @boats.each do |boat| %>
+  <h1><%= boat.name %></h1>
+  <h4><%= boat.description %></h4>
+  <p>Price: <%= boat.price %>€</p>
+  <p>Capacity: <%= boat.capacity %> people</p>
+<% end %>
