@@ -3,3 +3,14 @@
 <%= link_to 'Login/Sign up', new_user_session_path %>
 <br>
 <%= link_to 'All boats', boats_path %>
+
+<br>
+
+<% if current_user %>
+  <% if current_user.host %>
+    <%= link_to "create boat", new_boat_path %>
+  <% end %>
+<% else %>
+  <%= link_to 'Login/Sign up', new_user_session_path %>
+<% end %>
+

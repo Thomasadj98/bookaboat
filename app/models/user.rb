@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :boats
   has_many :bookings
   has_many :rented_boats, through: :bookings, foreign_key: "boat_id", class_name: "Boat"
+
+  def host?
+    host == true
+  end
 end
