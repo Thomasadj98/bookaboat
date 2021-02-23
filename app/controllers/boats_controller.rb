@@ -7,6 +7,10 @@ class BoatsController < ApplicationController
     @boat = Boat.new
   end
 
+  def show
+    @boat = Boat.find(params[:id])
+  end
+
   def create
     @user = current_user
     @boat = Boat.new(boat_params)
