@@ -9,7 +9,9 @@
   <input type="text" class="searchbar" placeholder=" kickstart your trip...">
 
   <div class="account-container">
-    <a href="#" id="linkstyling">Become a host</a>
+    <%= link_to "Become a host!   ", user_path, id:"linkstyling", method: "patch" %>
+    <%= link_to "Logout", destroy_user_session_path, id:"linkstyling", method: "delete" %>
+
 
     <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Account avatar" class="avatar-bordered">
   </div>
