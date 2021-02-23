@@ -1,28 +1,35 @@
-.card-trip {
+.cards-grid {
+  display: grid;
+  grid-gap: 20px;
+  flex-grow: 1;
+}
+
+.card-boat {
+  width: 100%;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 3px;
 }
 
-.card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card-trip h2 {
+.card-boat h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
-  font-size: 12px;
+.card-boat h4 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-boat p {
+  font-size: 13px;
   opacity: .7;
   margin: 0;
 }
 
-.card-trip .card-trip-infos {
+.card-boat .card-boat-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -30,9 +37,44 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.card-boat > img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
