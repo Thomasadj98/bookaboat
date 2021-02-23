@@ -15,7 +15,15 @@ class BoatsController < ApplicationController
       redirect_to root_path
     else
       render :new
+  end
+  end
+
+  def my_boats
+    @boats = Boat.all
+    @my_boats = @boats.select do |boat|
+      current_user == boat.user
     end
+    # @my_boats2 = Boat.where(user_id: current_user.id)
   end
 
   private
