@@ -1,8 +1,8 @@
-<h2>Sign up</h2>
-
-<div class="flex">
+<div class="split left">
+  <div class="centered">
+  <h2>Create an account</h2>
   <div class="form">
-    <%= simple_form_for(resource, as: resource_name, url: registration_path    (resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
     
       <div class="form-inputs">
@@ -30,7 +30,11 @@
     
     <%= render "devise/shared/links" %>
   </div>
+    </div>
+</div>
 
-  <img src="https://images.unsplash.com/photo-1517737278217-7bd5ac4759ab?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80">
 
+<div class="split right">
+  <div class="centered">
+  </div>
 </div>
