@@ -2,20 +2,39 @@
 
   <!-- How to add an svg logo? (with transparency) -->
 
-<%= image_tag 'logo', class: "logo" %>
+  <%= link_to root_path do %>
+    <%= image_tag 'logo', class: "logo" %>
+  <% end %>
   <!-- How to add a logo in the search bar? -->
 
   <input type="text" class="searchbar" placeholder=" kickstart your trip...">
 
+
   <div class="account-container">
-    <%= link_to "Become a host", user_path, id:"linkstyling", method: "patch" %>
+
+    <% if current_user %>
+      <% if current_user.host %>
+        <%= link_to "Add boat", new_boat_path, id:"linkstyling", class: "button-styling" %>
+      <% end %>
+    <% else %>
+      <%= link_to "Become a host", user_path, id:"linkstyling", class: "button-styling", method: "patch" %>
+    <% end %>
+
     <div class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">My boats</a>
-          <a class="dropdown-item" href="#">Logout</a>
-        </div>
+      <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">My boats</a>
+
+        <% if user_signed_in? %>
+          <% if current_user.host %>
+            <%= link_to "log Out", destroy_user_session_path, method: "delete", class: "dropdown-item" %>
+          <% end %>
+        <% else %>
+          <%= link_to "Log In", new_user_session_path, id:"linkstyling", method: "create", class: "dropdown-item" %>
+        <% end %>
+
       </div>
+    </div>
   </div>
 
 </div>

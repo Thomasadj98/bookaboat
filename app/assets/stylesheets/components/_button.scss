@@ -1,0 +1,13 @@
+.button-styling {
+  padding: 10px 30px;
+  background-color: $mainred;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.button-styling:hover {
+  color:white;
+  text-decoration: none;
+  background-color: #e03f4b;
+}

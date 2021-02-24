@@ -1,9 +1,11 @@
-<h1 class="text-center mt-2 mb-4">My Boats</h1>
+<h1 class="text-center mt-2 mb-4">My Boats</h1><br>
+
+<p>Hello <%= "#{@user.username}" %>, these are the boats that you inserted so far. Your account is active, that means that all your boats are rentable.</p>
 
 <div class="container">
   <div class="cards-grid">
     <% @my_boats.each do |boat| %>
-        <div class="card-boat">
+        <%= link_to(boat_path(boat)) <div class="card-boat">
           <img src="https://images.unsplash.com/photo-1576638994386-8bce04e2f4cb?  ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=651&q=80"/>
           <div class="card-boat-infos">
             <div>
@@ -13,6 +15,9 @@
             <h4>€<%= boat.price %>/day</h4>
           </div>
         </div>
+      <% end %>
     <% end %>
   </div>
+
+  <%= link_to "Add a new boat", new_boat_path, class: "button-styling" %>
 </div>
