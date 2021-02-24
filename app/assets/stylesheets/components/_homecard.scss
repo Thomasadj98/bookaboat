@@ -1,0 +1,19 @@
+.home-cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-card {
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-card h4 {
+  opacity: .8;
+}
+
+.home-card p {
+  opacity: .5;
+  font-size: small;
+}
