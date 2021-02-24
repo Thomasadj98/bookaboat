@@ -2,18 +2,20 @@
 
   <!-- How to add an svg logo? (with transparency) -->
 
-  <img src="https://e7.pngegg.com/pngimages/1021/267/png-clipart-motor-boats-yacht-computer-icons-boat-logo-monochrome.png" alt="bookaboat logo" class="logo">
-
+<%= image_tag 'logo', class: "logo" %>
   <!-- How to add a logo in the search bar? -->
 
   <input type="text" class="searchbar" placeholder=" kickstart your trip...">
 
   <div class="account-container">
-    <%= link_to "Become a host!   ", user_path, id:"linkstyling", method: "patch" %>
-    <%= link_to "Logout", destroy_user_session_path, id:"linkstyling", method: "delete" %>
-
-
-    <img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Account avatar" class="avatar-bordered">
+    <%= link_to "Become a host", user_path, id:"linkstyling", method: "patch" %>
+    <div class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">My boats</a>
+          <a class="dropdown-item" href="#">Logout</a>
+        </div>
+      </div>
   </div>
 
 </div>
