@@ -1,4 +1,5 @@
-<div class="form-container">
+<div class="static-img"></div>
+<div class="form-container margin-top-negative">
   <h1 class="text-center mt-2">Create a new boat</h1>
   
   <%= simple_form_for(@boat) do |f| %>
@@ -6,6 +7,6 @@
     <%= f.input :price %>
     <%= f.input :capacity %>
     <%= f.input :description %>
-    <%= f.submit %>
+    <%= f.submit class: "button-styling" %>
   <% end %>
 </div>
