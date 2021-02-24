@@ -11,6 +11,17 @@ body {
   margin-top: -75px;
 }
 
+h1, h2, h3, h4 {
+  color: $darkblue;
+  font-family: $main-font;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .margin-fix {
   margin-top: 50px;
 }
+
