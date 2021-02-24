@@ -2,7 +2,9 @@
 
   <!-- How to add an svg logo? (with transparency) -->
 
-  <%= image_tag 'logo', class: "logo" %>
+  <%= link_to root_path do %>
+    <%= image_tag 'logo', class: "logo" %>
+  <% end %>
   <!-- How to add a logo in the search bar? -->
 
   <input type="text" class="searchbar" placeholder=" kickstart your trip...">
