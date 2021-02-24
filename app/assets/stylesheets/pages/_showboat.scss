@@ -1,6 +1,7 @@
 .boat-show {
   width: 60vw;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .boat-banner-image {
@@ -28,17 +29,4 @@
 
 .info-section > p {
   margin: 0;
-}
-
-.info-section > a {
-  padding: 10px 20px;
-  background-color: blue;
-  border-radius: 20px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.info-section > a:hover {
-  background-color: lightblue;
 }
