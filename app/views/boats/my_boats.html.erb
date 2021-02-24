@@ -2,7 +2,8 @@
 
 <br>
 
-<p>Hello <%= "#{current_user.username}" %>, these are the boats that you inserted so far. Your account is active, that means that all your boats are rentable.</p>
+<p style="text-align:center; width: 500px; margin: auto;" >Hello <%= "#{current_user.username}" %>, these are the boats that you inserted so far. Your account is active, that means that all your boats are rentable. </p>
+<br><br>
 
 <div class="container">
   <div class="cards-grid">
@@ -22,6 +23,3 @@
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "Add a new boat", new_boat_path, class: "button-styling" %>
-</div>
