@@ -1,29 +1,32 @@
 .footer-container {
-    height: fit-content;
-    width: 100%;
-    display: flex;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $midblue;
+  ul {
+    list-style-type: none;
     margin-top: 40px;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $lightblue;
-    ul {
-        list-style-type: none;
-        margin-top: 40px;
-        margin-bottom: 35px;
-    }
-    // * {
-    //     outline: 1px dotted red;
-    // }
+    margin-bottom: 35px;
+  }
+  li, a, a:hover {
+    color: white;
+  }
+  a:hover {
+    font-weight: bold;
+  }
 }
 
 .logo-footer {
-    height: 55px;
+  height: 55px;
 }
 
 .footer-icons {
-    display: space-around;
-    img {
-        height: 20px;
-        padding-right: 10px;
-    }
+  display: space-around;
+  img {
+    height: 20px;
+    padding-right: 10px;
+  }
 }
