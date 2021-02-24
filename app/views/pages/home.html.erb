@@ -1,6 +1,6 @@
 <%= render 'banner' %>
 
-<h2 class="text-center mt-3">Boats near you</h2>
+<h2 class="text-center margin-fix">Boats near you</h2>
   <div class="cards-grid p-5">
     <% @boats.each do |boat| %>
         <%= link_to(boat_path(boat)) do %> <div class="card-boat">
