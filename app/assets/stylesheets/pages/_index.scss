@@ -4,6 +4,7 @@
 
 body {
   background-color: #FFF;
+  min-height: 100vh;
 }
 
 .margin-top-negative {
@@ -19,3 +20,8 @@ a:hover {
   font-weight: bold;
   text-decoration: none;
 }
+
+.margin-fix {
+  margin-top: 50px;
+}
+
