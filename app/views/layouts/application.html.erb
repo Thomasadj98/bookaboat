@@ -13,7 +13,9 @@
 
   <body>
       <div class="page-container">
-        <%= render 'shared/navbar' %>
+        <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+          <%= render 'shared/navbar' %>       
+        <% end %>
         <main class="main-content">
           <%= render 'shared/flashes' %>
           <%= yield %>
