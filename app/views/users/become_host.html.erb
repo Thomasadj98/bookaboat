@@ -1,3 +1,5 @@
 <p>Hello <%= "#{@user.username}" %>! Congratulations for deciding to become a host and rent your boat!</p> <br>
 
-<%= link_to "Rent your boat", new_boat_path %>
+<p>At the moment you don't have any boat uploaded. Please click on the following button to start renting your boats.</p>
+
+ <%= link_to "Add a new boat", new_boat_path, class: "button-styling" %>
