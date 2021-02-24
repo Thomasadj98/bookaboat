@@ -14,10 +14,10 @@
 
     <% if current_user %>
       <% if current_user.host %>
-        <%= link_to "Add boat", new_boat_path, id:"linkstyling" %>
+        <%= link_to "Add boat", new_boat_path, id:"linkstyling", class: "button-styling" %>
       <% end %>
     <% else %>
-      <%= link_to "Become a host", user_path, id:"linkstyling", method: "patch" %>
+      <%= link_to "Become a host", user_path, id:"linkstyling", class: "button-styling", method: "patch" %>
     <% end %>
 
     <div class="nav-item dropdown">
@@ -32,9 +32,6 @@
         <% else %>
           <%= link_to "Log In", new_user_session_path, id:"linkstyling", method: "create", class: "dropdown-item" %>
         <% end %>
-
-
-
 
       </div>
     </div>
