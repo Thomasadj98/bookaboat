@@ -9,3 +9,12 @@ body {
 .margin-top-negative {
   margin-top: -75px;
 }
+
+h1, h2, h3 {
+  color: $darkblue;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
