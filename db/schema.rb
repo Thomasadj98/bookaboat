@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_150040) do
     t.integer "price"
     t.integer "capacity"
     t.text "description"
-    t.boolean "available"
+    t.boolean "available", default: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
