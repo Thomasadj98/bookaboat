@@ -1,10 +1,16 @@
 .navbar-container {
-  height: 8vh;
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 10vw 0 10vw;
-  z-index : 1001;
+  background-color: rgba($color: #ADD8E6, $alpha: 0.8);
+  z-index: 1001;
+
+}
+.account-container {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -12,20 +18,19 @@
 }
 
 .searchbar {
-  border-radius: 15px;
+  border-radius: 50px;
   border: 1px solid lightgrey;
   font-size: 12px;
   height: 40px;
-  width: 30vw;
-  margin-left: 40px;
+  width: 20%;
+  margin-left: 50px;
+  font-family: "Nunito", "Helvetica", "sans-serif";
 }
 
 #linkstyling {
   text-decoration: none;
   color: black;
-  :hover {
-    color: grey;
-  }
+  margin-right: 13px;
 }
 
 .navbar-lewagon .navbar-collapse {
