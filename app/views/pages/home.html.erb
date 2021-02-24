@@ -1,8 +1,3 @@
-
-<h1>Pages#home</h1>>
-<%= link_to 'Login/Sign up', new_user_session_path %>
-<br>
-
 <%= render 'banner' %>
 
 <h2 class="text-center mt-3">Boats near you</h2>
@@ -22,13 +17,4 @@
   </div>
 
 <%= link_to 'All boats', boats_path %>
-<br>
-
-<% if current_user %>
-  <% if current_user.host %>
-    <%= link_to "create boat", new_boat_path %>
-  <% end %>
-<% else %>
-  <%= link_to 'Login/Sign up', new_user_session_path %>
-<% end %>
 
