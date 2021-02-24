@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: lightblue;
+    background-color: $lightblue;
     ul {
         list-style-type: none;
         margin-top: 40px;
@@ -22,6 +22,7 @@
 .footer-icons {
     display: space-around;
     img {
-        height: 50px;
+        height: 30px;
+        padding-right: 10px;
     }
 }
