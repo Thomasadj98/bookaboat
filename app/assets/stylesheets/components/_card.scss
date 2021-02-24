@@ -8,8 +8,10 @@
   width: 100%;
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  height: 275px;
+  padding-bottom: 20px;
 }
 
 .card-boat h2 {
@@ -18,9 +20,14 @@
   margin: 0;
 }
 
+.card-boat-pricing {
+  margin-left: 10px;
+}
+
 .card-boat h4 {
   font-size: 15px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .card-boat p {
@@ -33,7 +40,7 @@
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
 }
 
