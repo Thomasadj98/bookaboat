@@ -1,0 +1,10 @@
+<div class="search-form">
+  <%= form_tag boats_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "formbar border shadow-sm border-radius-50 p-3",
+      placeholder: "Kickstart your trip..."
+    %>
+  <% end %>
+  <i class="fas fa-search-location"></i>
+</div>

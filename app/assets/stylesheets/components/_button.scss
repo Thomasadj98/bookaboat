@@ -4,6 +4,10 @@
   border-radius: 20px;
   text-decoration: none;
   color: white;
+  border: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .button-styling:hover {
@@ -11,4 +15,5 @@
   text-decoration: none;
   background-color: #e03f4b;
   font-weight: bold;
+  border: none;
 }
