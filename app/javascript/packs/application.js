@@ -25,7 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 
-import { initHomeSearchbar } from '../plugins/navbar-form';
 import { initDynamicSearchbar } from '../plugins/navbar-form';
 
 // Internal imports, e.g:
@@ -34,6 +33,5 @@ import { initDynamicSearchbar } from '../plugins/navbar-form';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initHomeSearchbar();
   initDynamicSearchbar();
 });
