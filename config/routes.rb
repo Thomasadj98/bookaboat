@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "user/boats", to: "boats#my_boats"
   patch "user", to: "users#become_host"
 
-  resources :boats, only: [ :index, :show, :new, :create ]
+  resources :boats, only: [ :index, :show, :new, :create ] do
+    resources :bookings, only: [ :create ]
+  end
 
 end

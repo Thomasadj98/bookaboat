@@ -29,6 +29,7 @@ class BoatsController < ApplicationController
   def show
     @boat = Boat.find(params[:id])
     @markers = [{ lat: @boat.latitude, lng: @boat.longitude }]
+    @booking = Booking.new
   end
 
   def create
