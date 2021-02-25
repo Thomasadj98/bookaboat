@@ -10,6 +10,8 @@ class User < ApplicationRecord
 
   has_one_attached :photo
 
+  validates :username, presence: true, uniqueness: true
+
   def host?
     host == true
   end

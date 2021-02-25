@@ -1,0 +1,19 @@
+.search-form {
+  position: absolute;
+  top: 430px;
+  left: 32%;
+  i {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+  }
+}
+
+.search-form.sticky {
+  top: 12px;
+}
+
+.formbar {
+  width: 80vh;
+  height: 45px;
+}

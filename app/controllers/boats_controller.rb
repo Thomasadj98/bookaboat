@@ -1,6 +1,14 @@
 class BoatsController < ApplicationController
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      sql_query = " \
+      boats.name @@ :query \
+      OR boats.description @@ :query \
+    "
+      @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @boats = Boat.all
+    end
   end
 
   def new
@@ -33,6 +41,6 @@ class BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:name, :price, :capacity, :description, :photo)
+    params.require(:boat).permit(:name, :price, :capacity, :description, :city, :photo)
   end
 end

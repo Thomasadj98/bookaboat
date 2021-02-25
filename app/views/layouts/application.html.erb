@@ -11,9 +11,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body data-page='<%= "#{controller_name}_#{action_name}" %>'>
       <div class="page-container">
-        <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+        <% unless controller_name == "sessions" || controller_name == "registrations" %>
           <%= render 'shared/navbar' %>       
         <% end %>
         <main class="main-content">
