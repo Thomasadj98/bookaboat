@@ -2,7 +2,7 @@
   <%= form_tag boats_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-bar border-radius-50",
+      class: "formbar border shadow-sm border-radius-50 p-3",
       placeholder: "Kickstart your trip..."
     %>
   <% end %>
