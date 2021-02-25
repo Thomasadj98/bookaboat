@@ -4,6 +4,7 @@
     <title>Bookaboat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,10 +12,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
+  <body>
+
+      <div class="page-container">
+        <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
+          <%= render 'shared/navbar' %>
+
   <body data-page='<%= "#{controller_name}_#{action_name}" %>'>
       <div class="page-container">
         <% unless controller_name == "sessions" || controller_name == "registrations" %>
           <%= render 'shared/navbar' %>       
+
         <% end %>
         <main class="main-content">
           <%= render 'shared/flashes' %>

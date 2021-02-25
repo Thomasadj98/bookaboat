@@ -1,5 +1,13 @@
 class BoatsController < ApplicationController
   def index
+    @boats = Boat.all
+    @markers = @boats.geocoded.map do |boat|
+      {
+        lat: boat.latitude,
+        lng: boat.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { boat: boat })
+      }
+
     if params[:query].present?
       sql_query = " \
       boats.name @@ :query \
@@ -9,6 +17,7 @@ class BoatsController < ApplicationController
       @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
     else
       @boats = Boat.all
+
     end
   end
 
@@ -18,6 +27,7 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
+    @markers = [{ lat: @boat.latitude, lng: @boat.longitude }]
   end
 
   def create
