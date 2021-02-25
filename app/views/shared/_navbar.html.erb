@@ -26,9 +26,10 @@
       <% if  user_signed_in? && current_user.photo.attached? %>
         <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown",
           data: { toggle: "dropdown" },
-          aria: { haspopup: "true", expanded: "false"} %>
+          aria: { haspopup: "true", expanded: "false"},
+          transformation: { width: 45, height: 45, gravity: "face", radius: "max", crop: "fill"} %>
       <% else %>
-        <i class="fas fa-user-circle fa-2x avatar" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <i class="fas fa-user-circle fa-2x" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
       <% end %>
 
 
