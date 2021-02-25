@@ -1,6 +1,13 @@
 class BoatsController < ApplicationController
   def index
     @boats = Boat.all
+    @markers = @boats.geocoded.map do |boat|
+      {
+        lat: boat.latitude,
+        lng: boat.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { boat: boat })
+      }
+    end
   end
 
   def new
@@ -9,6 +16,7 @@ class BoatsController < ApplicationController
 
   def show
     @boat = Boat.find(params[:id])
+    @markers = [{ lat: @boat.latitude, lng: @boat.longitude }]
   end
 
   def create

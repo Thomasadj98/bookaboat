@@ -4,6 +4,7 @@
     <title>Bookaboat</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_pack_tag 'application' %>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,9 +13,10 @@
   </head>
 
   <body>
+
       <div class="page-container">
         <% unless current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
-          <%= render 'shared/navbar' %>       
+          <%= render 'shared/navbar' %>
         <% end %>
         <main class="main-content">
           <%= render 'shared/flashes' %>
