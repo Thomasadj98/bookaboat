@@ -19,7 +19,7 @@ class BoatsController < ApplicationController
       redirect_to root_path
     else
       render :new
-  end
+    end
   end
 
   def my_boats
@@ -33,6 +33,6 @@ class BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:name, :price, :capacity, :description)
+    params.require(:boat).permit(:name, :price, :capacity, :description, :city)
   end
 end

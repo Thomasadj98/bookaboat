@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :rented_boats, through: :bookings, foreign_key: "boat_id", class_name: "Boat"
 
+  validates :username, presence: true, uniqueness: true
+
   def host?
     host == true
   end
