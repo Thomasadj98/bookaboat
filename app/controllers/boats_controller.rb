@@ -4,7 +4,8 @@ class BoatsController < ApplicationController
       sql_query = " \
       boats.name @@ :query \
       OR boats.description @@ :query \
-    "
+      OR boats.city @@ :query \
+      "
       @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
     else
       @boats = Boat.all
