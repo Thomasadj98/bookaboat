@@ -1,6 +1,10 @@
 class BoatsController < ApplicationController
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      @boats = Boat.where(name: params[:query])
+    else
+      @boats = Boat.all
+    end
   end
 
   def new

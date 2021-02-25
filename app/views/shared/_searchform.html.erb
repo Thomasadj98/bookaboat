@@ -1,0 +1,8 @@
+<%= form_tag boats_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-bar border-radius-50",
+    placeholder: "Kickstart your trip..."
+  %>
+  <%= submit_tag "Search", class: "button-styling" %>
+<% end %>
