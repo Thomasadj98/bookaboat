@@ -1,7 +1,11 @@
 class BoatsController < ApplicationController
   def index
     if params[:query].present?
-      @boats = Boat.where(name: params[:query])
+      sql_query = " \
+      boats.name @@ :query \
+      OR boats.description @@ :query \
+    "
+      @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
     else
       @boats = Boat.all
     end
