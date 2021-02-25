@@ -7,6 +7,17 @@ class BoatsController < ApplicationController
         lng: boat.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { boat: boat })
       }
+
+    if params[:query].present?
+      sql_query = " \
+      boats.name @@ :query \
+      OR boats.description @@ :query \
+      OR boats.city @@ :query \
+      "
+      @boats = Boat.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @boats = Boat.all
+
     end
   end
 
@@ -27,7 +38,7 @@ class BoatsController < ApplicationController
       redirect_to root_path
     else
       render :new
-  end
+    end
   end
 
   def my_boats
@@ -41,6 +52,6 @@ class BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:name, :price, :capacity, :description)
+    params.require(:boat).permit(:name, :price, :capacity, :description, :city, :photo)
   end
 end
