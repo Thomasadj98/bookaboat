@@ -13,3 +13,18 @@
   opacity: .5;
   font-size: small;
 }
+
+
+@media (max-width: 1000px) {
+  .home-cards {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .home-card {
+    width: 400px;
+    text-align: center;
+    padding: 20p 30px;
+    margin: 0 auto;
+  }
+
+}

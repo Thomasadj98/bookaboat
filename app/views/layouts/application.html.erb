@@ -14,15 +14,17 @@
 
   <body>
 
+    <% unless controller_name == "sessions" || controller_name == "registrations" %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+
     <div class="page-container">
-      <% unless controller_name == "sessions" || controller_name == "registrations" %>
-        <%= render 'shared/navbar' %>
-      <% end %>
       <main class="main-content">
         <%= render 'shared/flashes' %>
         <%= yield %>
       </main>
       <%= render 'shared/footer' %>
     </div>
+
   </body>
 </html>
