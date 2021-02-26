@@ -6,9 +6,6 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.boat = @boat
     @booking.save!
-    redirect_to root_path
-    # redirect to different page tomorrow. No redirects to crashing
-    # homepage.
   end
 
   private
@@ -17,3 +14,12 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:booking_date, :guests)
   end
 end
+
+# booking gives error message when negative or 0. But not a very
+# friendly one.
+# Boat.capacity can't exceed Booking.guest (see booking.rb)
+# Add visual feedback when booking has been confirmed on the same
+# page (view).
+
+# Complete booking functionality where the host can accept
+# a booking
