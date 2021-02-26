@@ -3,7 +3,7 @@
 <h2 class="text-center margin-fix">Boats near you</h2>
   <div class="cards-grid p-5">
     <% @boats.each do |boat| %>
-        <%= link_to(boat_path(boat)) do %>
+        <%= link_to boat_path(boat), { class: 'fade-in' } do %>
         <div class="card-boat">
 
           <% if boat.photo.attached? %>

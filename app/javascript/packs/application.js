@@ -33,6 +33,15 @@ document.addEventListener('turbolinks:load', () => {
 import "bootstrap";
 
 import { initDynamicSearchbar } from '../plugins/navbar-form';
+import { initAnimations } from '../plugins/init_animations'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  startEvent: 'turbolinks:load' // if you are using turbolinks
+})
+
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -40,5 +49,6 @@ import { initDynamicSearchbar } from '../plugins/navbar-form';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  // initAnimations();
   initDynamicSearchbar();
 });
