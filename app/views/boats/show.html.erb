@@ -30,9 +30,10 @@
       <%= f.input :guests, collection: 1..(@boat.capacity) %>
       <%= f.submit class: "button-styling w-100" %>
       <% end %>
+      <div class="booking-confirmation"><%= flash[:notice] %></div>
     </div>
   </div>
-  <div class="booking-confirmation"><%= flash[:notice] %></div>
+
 </div>
 
   <br>
