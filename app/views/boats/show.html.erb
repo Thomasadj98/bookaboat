@@ -26,7 +26,6 @@
 
     <div class="form-container-booking">
       <%= simple_form_for([@boat, @booking]) do |f| %>
-
       <%= f.input :booking_date, start_year: Date.today.year, end_year: Date.today.year + 1%>
       <%= f.input :guests, collection: 1..(@boat.capacity) %>
       <%= f.submit class: "button-styling w-100" %>
