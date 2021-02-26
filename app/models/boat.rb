@@ -8,7 +8,6 @@ class Boat < ApplicationRecord
   validates :price, presence: true, numericality: true
   validates :capacity, presence: true, numericality: true
   validates :description, presence: true, length: { minimum: 30 }
-  validates :city, presence: true
   validates :address, presence: true
 
   geocoded_by :address
