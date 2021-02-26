@@ -33,7 +33,6 @@ document.addEventListener('turbolinks:load', () => {
 import "bootstrap";
 
 import { initDynamicSearchbar } from '../plugins/navbar-form';
-import { initAnimations } from '../plugins/init_animations'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
