@@ -22,7 +22,7 @@
   <p><%= @boat.description %> </p>
   <%= simple_form_for([@boat, @booking]) do |f| %>
     <%= f.input :booking_date %>
-    <%= f.input :guests %>
+    <%= f.input :guests, collection: 1..(@boat.capacity) %>
     <%= f.submit class: "button-styling border border-white" %>
   <% end %>
   </div>
