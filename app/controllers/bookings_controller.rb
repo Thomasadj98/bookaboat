@@ -6,6 +6,12 @@ class BookingsController < ApplicationController
     @booking.user = @user
     @booking.boat = @boat
     @booking.save!
+    if @booking.save
+      redirect_to boat_path(@boat), notice: "Congratulations you've booked
+      #{@boat.name} for #{@booking.guests} people on #{@booking.booking_date} for the low price of €#{@boat.price}!"
+    else
+      render :new
+    end
   end
 
   private
@@ -15,9 +21,6 @@ class BookingsController < ApplicationController
   end
 end
 
-# booking gives error message when negative or 0. But not a very
-# friendly one.
-# Boat.capacity can't exceed Booking.guest (see booking.rb)
 # Add visual feedback when booking has been confirmed on the same
 # page (view).
 
