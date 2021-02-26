@@ -4,12 +4,19 @@
 }
 
 .home-card {
-  width: 300px;
+  width: 80%;
   text-align: center;
   padding: 20px;
+  margin: 0 auto;
 }
 
 .home-card p {
   opacity: .5;
   font-size: small;
+}
+
+@media only screen and (max-width: 800px) {
+  .home-cards {
+    flex-direction: column;
+  }
 }
